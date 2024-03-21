@@ -101,10 +101,12 @@ service AccountService {
 
 message GetAccountRequest {
   string id = 1; // @gotags: `class:"public" eventstream:"observation"`
+  //
 }
 
 message GetAccountResponse {
   resources.accounts.v1.Account item = 1;
+  //
 }
 
 message ListAccountsRequest {
@@ -147,28 +149,34 @@ message ListAccountsResponse {
 
 message CreateAccountRequest {
   resources.accounts.v1.Account item = 2;
+  //
 }
 
 message CreateAccountResponse {
   string uri = 1; // @gotags: `class:"public" eventstream:"observation"`
   resources.accounts.v1.Account item = 2;
+  //
 }
 
 message UpdateAccountRequest {
   string id = 1; // @gotags: `class:"public" eventstream:"observation"`
   resources.accounts.v1.Account item = 2;
   google.protobuf.FieldMask update_mask = 3 [json_name = "update_mask"];
+  //
 }
 
 message UpdateAccountResponse {
   resources.accounts.v1.Account item = 1;
+  //
 }
 
 message DeleteAccountRequest {
   string id = 1; // @gotags: `class:"public" eventstream:"observation"`
+  //
 }
 
 message DeleteAccountResponse {}
+//
 
 message SetPasswordRequest {
   string id = 1; // @gotags: `class:"public" eventstream:"observation"`
@@ -180,6 +188,7 @@ message SetPasswordRequest {
 
 message SetPasswordResponse {
   resources.accounts.v1.Account item = 1;
+  //
 }
 
 message ChangePasswordRequest {
@@ -193,4 +202,5 @@ message ChangePasswordRequest {
 
 message ChangePasswordResponse {
   resources.accounts.v1.Account item = 1;
+  //
 }
